@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="v4.0/css/bootstrap.min.css" rel="stylesheet">
+	<title>Login</title>
+	<style>
+        body{
+            background-color: rgba(217,237,247,1);
+        }
+        .login{
+            margin-top: 100px;
+        }
+        .form-group{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row login justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="card">
+                <div class="card-header bg-primary"><strong>Login</strong></div>
+                <div class="card-body">
+                    <form id="frm_login" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label class="control-label" for="inputName">Usuário:</label>
+                            <input class="form-control" id="inputName" placeholder="Seu nome" type="text" required>
+                            <div class="invalid-tooltip">Informe seu usuário</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="inputPass">Senha:</label>
+                            <input class="form-control" id="inputPass" placeholder="Sua senha" data-delay="1000" type="password" required>
+                            <div class="invalid-tooltip">Informe sua senha</div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary form-control" type="submit">Entrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="v4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    (function() {
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet">
+	<title>Grid</title>
+</head>
+<body>
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row" id="row">
+      <div class="col-xs-12 col-md-8" id="coluna">.col-xs-12 .col-md-8</div>
+      <div class="col-xs-6 col-md-4" id="coluna">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row" id="row">
+      <div class="col-xs-6 col-md-4" id="coluna">.col-xs-6 .col-md-4</div>
+      <div class="col-xs-6 col-md-4" id="coluna">.col-xs-6 .col-md-4</div>
+      <div class="col-xs-6 col-md-4" id="coluna">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row" id="row">
+      <div class="col-xs-6" id="coluna">.col-xs-6</div>
+      <div class="col-xs-6" id="coluna">.col-xs-6</div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/jquery.min.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+       <meta charset="utf-8">
+       <link href="css/bootstrap.min.css" rel="stylesheet">
+       <link href="main.css" rel="stylesheet">
+       <title>Modals</title> 
+    </head>
+    <body>
+        <div class="container" style="margin-top: 50px; margin-left: 100px;">
+            <button type="button" class="btn btn-lg btn-danger" data-toggle="teste" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+            <button type="button" class="btn btn-lg btn-warning">Click to toggle popover</button>
+            <br/>
+            <br/>
+            <br/>
+            <a class="btn btn-success" href="#" data-toggle="popover" title="Titulo da popover" data-content="Conteúdo do popover">Toggle popover</a>
+        
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                //$('[data-toggle="teste"],[data-toggle="popover"]').popover('show');
+                $('[data-toggle="popover"]').popover();   
+                $('[data-toggle="teste"]').popover();
+                $('.btn-danger')[0].addEventListener('mouseleave',oculta);
+                
+                $('.btn-warning').popover({title: "Titulo", content: "Conteúdo", placement: "right"});
+                $('.btn-warning')[0].addEventListener('mouseenter',mostra);
+                $('.btn-warning')[0].addEventListener('mouseleave',oculta1);
+            });
+            
+            function mostra(){
+                $('.btn-warning').popover('show');
+            }
+            
+            function oculta1(){
+                $('.btn-warning').popover('hide');
+                //$('.btn-warning').button('reset');
+            }
+            
+            function oculta(){
+                $('.btn-danger').popover('hide');
+            }
+        </script>
+    </body>
+</html>

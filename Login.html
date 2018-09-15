@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+	<title>Login</title>
+	<style>
+        .login{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body class="bg-info">
+<div class="container">
+    <div class="row login">
+        <div class="col-md-4 col-sm-3 col-xs-1"></div>
+        <div class="col-md-4 col-sm-6 col-xs-10">
+            <div class="panel panel-primary">
+                <div class="panel panel-heading">Login</div>
+                <div class="panel panel-body">
+                    <form id="frm_login">
+                        <div class="form-group has-feedback">
+                            <label class="control-label" for="inputName">Usuário:</label>
+                            <input class="form-control" id="inputName" placeholder="Seu nome" type="text" data-error="Informe seu usuário" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label" for="inputPass">Senha:</label>
+                            <input class="form-control" id="inputPass" placeholder="Sua senha" data-delay="1000" type="password" data-error="Informe sua senha" required>
+                            <span class="glyphicon form-control-feedback hidden" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary form-control" type="submit"><span class="glyphicon glyphicon-user"></span> Entrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/validator.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#frm_login').validator();
+    });
+</script>
+</body>
+</html>
